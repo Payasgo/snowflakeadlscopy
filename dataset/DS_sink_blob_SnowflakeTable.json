@@ -1,0 +1,16 @@
+{
+	"name": "DS_sink_blob_SnowflakeTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Snowflake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "PUBLIC",
+			"table": "AJAYPATHURIJSPIDER"
+		}
+	}
+}
