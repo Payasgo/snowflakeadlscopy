@@ -7,9 +7,26 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "configsnow"
 		},
+		"LS_Snowflake_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'LS_Snowflake'",
+			"defaultValue": "jdbc:snowflake://id54385.central-india.azure.snowflakecomputing.com/?user=KRANTHI&db=ajaypathuri&warehouse=COMPUTE_WH"
+		},
 		"LS_AzureKeyVault_properties_typeProperties_baseUrl": {
 			"type": "string",
 			"defaultValue": "https://snwkeys.vault.azure.net/"
+		},
+		"LS_AzureBlobStorage_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'LS_AzureBlobStorage'"
+		},
+		"LS_AzureBlobStorage_properties_typeProperties_sasToken_secretName": {
+			"type": "string",
+			"defaultValue": "blobsastoken"
+		},
+		"LS_AzureDataLakeStorage_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://adlsgen2snow.dfs.core.windows.net"
 		},
 		"containerUri": {
 			"type": "string",
@@ -38,8 +55,20 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
+					"LS_Snowflake_connectionString": {
+						"value": "[parameters('LS_Snowflake_connectionString')]"
+					},
 					"LS_AzureKeyVault_properties_typeProperties_baseUrl": {
 						"value": "[parameters('LS_AzureKeyVault_properties_typeProperties_baseUrl')]"
+					},
+					"LS_AzureBlobStorage_sasUri": {
+						"value": "[parameters('LS_AzureBlobStorage_sasUri')]"
+					},
+					"LS_AzureBlobStorage_properties_typeProperties_sasToken_secretName": {
+						"value": "[parameters('LS_AzureBlobStorage_properties_typeProperties_sasToken_secretName')]"
+					},
+					"LS_AzureDataLakeStorage_properties_typeProperties_url": {
+						"value": "[parameters('LS_AzureDataLakeStorage_properties_typeProperties_url')]"
 					}
 				}
 			},

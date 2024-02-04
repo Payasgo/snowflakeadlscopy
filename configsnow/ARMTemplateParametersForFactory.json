@@ -5,8 +5,20 @@
 		"factoryName": {
 			"value": "configsnow"
 		},
+		"LS_Snowflake_connectionString": {
+			"value": "jdbc:snowflake://id54385.central-india.azure.snowflakecomputing.com/?user=KRANTHI&db=ajaypathuri&warehouse=COMPUTE_WH"
+		},
 		"LS_AzureKeyVault_properties_typeProperties_baseUrl": {
 			"value": "https://snwkeys.vault.azure.net/"
+		},
+		"LS_AzureBlobStorage_sasUri": {
+			"value": ""
+		},
+		"LS_AzureBlobStorage_properties_typeProperties_sasToken_secretName": {
+			"value": "blobsastoken"
+		},
+		"LS_AzureDataLakeStorage_properties_typeProperties_url": {
+			"value": "https://adlsgen2snow.dfs.core.windows.net"
 		}
 	}
 }
