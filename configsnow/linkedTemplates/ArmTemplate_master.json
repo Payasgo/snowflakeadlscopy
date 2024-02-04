@@ -12,10 +12,6 @@
 			"metadata": "Secure string for 'connectionString' of 'LS_Snowflake'",
 			"defaultValue": "jdbc:snowflake://id54385.central-india.azure.snowflakecomputing.com/?user=KRANTHI&db=ajaypathuri&warehouse=COMPUTE_WH"
 		},
-		"LS_AzureKeyVault_properties_typeProperties_baseUrl": {
-			"type": "string",
-			"defaultValue": "https://snwkeys.vault.azure.net/"
-		},
 		"LS_AzureBlobStorage_sasUri": {
 			"type": "secureString",
 			"metadata": "Secure string for 'sasUri' of 'LS_AzureBlobStorage'"
@@ -27,6 +23,10 @@
 		"LS_AzureDataLakeStorage_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsgen2snow.dfs.core.windows.net"
+		},
+		"LS_AzureKeyVault_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://snwkeys.vault.azure.net/"
 		},
 		"containerUri": {
 			"type": "string",
