@@ -1,0 +1,9 @@
+{
+	"name": "configsnow",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "ad9c5c52-81e6-48cb-9c1a-b39ee0dd582f",
+		"tenantId": "abc7b3b4-0474-4c36-8f68-7f18035fed58"
+	}
+}
