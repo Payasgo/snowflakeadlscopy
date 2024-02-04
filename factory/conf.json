@@ -1,0 +1,9 @@
+{
+	"name": "conf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "65ceb3bf-77fd-4a92-b011-8fb722edc856",
+		"tenantId": "abc7b3b4-0474-4c36-8f68-7f18035fed58"
+	}
+}
