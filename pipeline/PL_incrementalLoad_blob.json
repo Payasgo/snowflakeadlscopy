@@ -81,7 +81,7 @@
 					"source": {
 						"type": "SqlServerSource",
 						"sqlReaderQuery": {
-							"value": "select * from DEPT where DEPTNO =40 ",
+							"value": "select * from DEPT ",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
