@@ -1,0 +1,12 @@
+{
+	"name": "DS_Lookup_SqlServerTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Ls_SqlServer",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": []
+	}
+}

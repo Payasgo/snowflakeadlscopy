@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Lookup_getmaxvalue",
+				"name": "Lookup_get_maxvalue",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
@@ -17,12 +17,12 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlServerSource",
-						"sqlReaderQuery": "select max(loc) as newloc from DEPT",
+						"sqlReaderQuery": "select max(DEPTNO) as Maxvalue from DEPT",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "DS_Source_in_SqlServerTable",
+						"referenceName": "DS_Lookup_SqlServerTable",
 						"type": "DatasetReference"
 					}
 				}
@@ -42,12 +42,12 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlServerSource",
-						"sqlReaderQuery": "select * from watermark where \ntablename = 'DEPT'",
+						"sqlReaderQuery": "select * from watermark where tablename='DEPT'",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
 					"dataset": {
-						"referenceName": "DS_Source_in_SqlServerTable",
+						"referenceName": "DS_Lookup_SqlServerTable",
 						"type": "DatasetReference"
 					}
 				}
@@ -57,7 +57,7 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "Lookup_getmaxvalue",
+						"activity": "Lookup_get_maxvalue",
 						"dependencyConditions": [
 							"Completed"
 						]
@@ -81,7 +81,7 @@
 					"source": {
 						"type": "SqlServerSource",
 						"sqlReaderQuery": {
-							"value": "select * from DEPT where loc =@{activity('Lookup_get_lvp').output.firstRow.last_processed_value}",
+							"value": "select * from DEPT where DEPTNO =40 ",
 							"type": "Expression"
 						},
 						"queryTimeout": "02:00:00",
@@ -110,19 +110,19 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "DS_Source_in_SqlServerTable",
+						"referenceName": "DS_Lookup_SqlServerTable",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DS_SINK_INC_DelimitedText",
+						"referenceName": "DS_SINK_Incre_DelimitedText",
 						"type": "DatasetReference"
 					}
 				]
 			},
 			{
-				"name": "Stored procedure1",
+				"name": "Stored procedure",
 				"type": "SqlServerStoredProcedure",
 				"dependsOn": [
 					{
@@ -145,7 +145,7 @@
 					"storedProcedureParameters": {
 						"lpv": {
 							"value": {
-								"value": "@activity('Lookup_getmaxvalue').output.firstRow.maxvalue",
+								"value": "@activity('Lookup_get_maxvalue').output.firstRow.maxvalue",
 								"type": "Expression"
 							},
 							"type": "String"
@@ -160,7 +160,7 @@
 					}
 				},
 				"linkedServiceName": {
-					"referenceName": "LS_SqlServer",
+					"referenceName": "Ls_SqlServer",
 					"type": "LinkedServiceReference"
 				}
 			}
