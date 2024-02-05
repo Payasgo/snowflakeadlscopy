@@ -1,0 +1,9 @@
+{
+	"name": "pipconf",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f6f4f487-3521-4e5a-9c63-84fcee845835",
+		"tenantId": "abc7b3b4-0474-4c36-8f68-7f18035fed58"
+	}
+}
