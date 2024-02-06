@@ -1,0 +1,9 @@
+{
+	"name": "mapsdata",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "636fe436-12eb-4d2d-b20d-2f9a5028134b",
+		"tenantId": "abc7b3b4-0474-4c36-8f68-7f18035fed58"
+	}
+}
