@@ -5,7 +5,7 @@
 		"type": "Snowflake",
 		"typeProperties": {
 			"authenticationType": "Basic",
-			"connectionString": "jdbc:snowflake://id54385.central-india.azure.snowflakecomputing.com/?user=KRANTHI&db=EMPLOYEE&warehouse=COMPUTE_WH",
+			"connectionString": "jdbc:snowflake://id54385.central-india.azure.snowflakecomputing.com/?user=KRANTHI&db=EMPS&warehouse=COMPUTE_WH",
 			"password": {
 				"type": "AzureKeyVaultSecret",
 				"store": {
