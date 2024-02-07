@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlServerSource",
-						"sqlReaderQuery": "\nSELECT s.name AS SchemaName,\nt.name AS TableName\nFROM sys.tables t\nINNER JOIN sys.schemas s\nON t.Schema_id =s.Schema_id\nWHERE s.name = 'dbo'",
+						"sqlReaderQuery": "SELECT s.name AS SchemaName,\nt.name AS TableName\nFROM sys.tables t\nINNER JOIN sys.schemas s\nON t.Schema_id =s.Schema_id\nWHERE s.name = 'dbo'",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
