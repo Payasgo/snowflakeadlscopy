@@ -1,0 +1,19 @@
+{
+	"name": "LS_Snowflake",
+	"properties": {
+		"annotations": [],
+		"type": "Snowflake",
+		"typeProperties": {
+			"authenticationType": "Basic",
+			"connectionString": "jdbc:snowflake://id54385.central-india.azure.snowflakecomputing.com/?user=KRANTHI&db=EMPLOYEE&warehouse=COMPUTE_WH",
+			"password": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "LS_AzureKeyVault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "snowpassword"
+			}
+		}
+	}
+}
