@@ -116,7 +116,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DS_SINK_Incre_DelimitedText",
+						"referenceName": "DS_SINK_SO_INC_DelimitedText",
 						"type": "DatasetReference"
 					}
 				]
@@ -160,7 +160,7 @@
 					}
 				},
 				"linkedServiceName": {
-					"referenceName": "Ls_SqlServer",
+					"referenceName": "LS_SqlServer",
 					"type": "LinkedServiceReference"
 				}
 			}
